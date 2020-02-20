@@ -243,10 +243,10 @@ class repeat4:
 
    def __call__( self, rhs: element ):   
       return element( [
-         xy(      0,      0 ) ( rhs ),
-         xy( self.x,      0 ) ( rhs ),
-         xy(      0, self.y ) ( rhs ),
-         xy( self.x, self.y ) ( rhs ),
+         xy(      0,      0 ) ** rhs,
+         xy( self.x,      0 ) ** rhs,
+         xy(      0, self.y ) ** rhs,
+         xy( self.x, self.y ) ** rhs,
       ] )   
       
 class extrude:
@@ -273,13 +273,13 @@ class rotate:
 #============================================================================     
 
 def chisel( size ):
-   return rectangle( size ) - dup2( size)( circle( size ) )
+   return rectangle( size ) - dup2( size) ** circle( size )
       
 def rounded_rectangle( size: xy, rounding ) -> element:
    ch = chisel( rounding )
    return rectangle( size ) - element( [
       ch,
-      xy( 0, size.y )( rotate( xyz( 0, 0, -90 )))( ch ),
+      xy( 0, size.y ) ** rotate( 0, 0, -90 ) ** ch,
    ] )   
       
       
