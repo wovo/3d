@@ -1,4 +1,4 @@
-PSML : Python Solid Modeling Library
+# PSML : Python Solid Modeling Library
 
 version: 0.01 - 2020-02-21
 
