@@ -502,10 +502,7 @@ class repeat2:
     """
 
     def __init__( self, x, y = None, z = None ):
-       if y == None:
-          self.x, self.y = x.x, x.y
-       else:
-          self.x, self.y = x, y
+       self.shift= shift( x, y, z )
 
     def __pow__( self, minion: solid_element ) -> solid_element:   
        return minion + ( self.shift ** minion )

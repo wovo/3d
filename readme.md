@@ -8,11 +8,13 @@ This is a Python library (Python 3 required) for writing
 
 OpenSCAD is a great tool for rendering a 3D model and generating
 an stl file from it for 3D printing.
-The OpenSCAD built-in language is effective for simple projects,
+The OpenSCAD built-in language is effective for simple projects
+and I like its functional-programming feeling,
 but I missed the general-purpose features of a true programming language,
 so why not use Python to create OpenSCAD files?
 Apparently I was not the first with this idea, but I found the
 existing libraries unsatisfactory, at least to me.
+I guess that says more about me than about those libraries.
 So as all stubborn programmers do, I created yet another one.
 
 ~~~Python
@@ -34,7 +36,7 @@ Finally the write method writes the corresponding OpenSCAD code
 to the output.scad file.
 When this file is opened in OpenSCAD it renders a simple snowman.
 
-![snowman](images/snowman.png)
+![snowman](examples/images/snowman.png)
 
 The power of a general purpose language, in this case Python's
 List comprehension and reduce, can be used to create seemingly complex
@@ -53,7 +55,7 @@ model = reduce(
 model.write( "output.scad" )
 ~~~
 
-![snowman](images/triangle.png)
+![snowman](examples/images/triangle.png)
 
 To use psml, arrange for the psml/psml.py file 
 to be importable from your project. 
@@ -64,7 +66,7 @@ import sys
 sys.path.append( "../psml" )
 ~~~
 
-My workflow is
+Workflow is
 - edit the Python source 
 - run it from a command line
 - have OpenSCAD with the result file open, 
@@ -78,11 +80,13 @@ Similar libraries:
    - [SolidPython](https://github.com/SolidCode/SolidPython)
    - [OpenPySCAD](https://pypi.org/project/OpenPySCAD)
    
+-----------------------------------------------------------------------------   
+   
 ToDo list
 - simplify and check the shift parameters
-- tests
-- user manual
 - more examples
+- user manual
+- auto-generate images and readme.md from the examples?
 - generate the Python reference
 
 -----------------------------------------------------------------------------      
