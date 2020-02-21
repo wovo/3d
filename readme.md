@@ -73,13 +73,15 @@ Feedback is welcome.
 Constructive feedback even more.
 
 ToDo list
+- tests
 - user manual
 - more examples
+- generate the Python reference
 
 -----------------------------------------------------------------------------      
       
-(c) Wouter van Ooijen (wouter@voti.nl) 2020
+(c) Wouter van Ooijen (wouter.vanooijen@hu.nl) 2020
 
 Distributed under the Boost Software License, Version 1.0.
-(See accompanying file LICENSE_1_0.txt or copy at 
+(See accompanying file license_1_0.txt or copy at 
 http://www.boost.org/LICENSE_1_0.txt) 
