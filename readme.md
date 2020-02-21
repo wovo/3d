@@ -28,6 +28,7 @@ Shift is a 3D operator that shifts its subject in the specified
 (z, y and z) direction. 
 Rotate rotates its subject by the specified angles (in degrees) 
 around the x, y and z axises.
+The \*\* (power operator) applies a shift or rotate to a solid.
 The + operator combines solids.
 Finally the write method writes the corresponding OpenSCAD code
 to the output.scad file.
@@ -53,6 +54,15 @@ model.write( "output.scad" )
 ~~~
 
 ![snowman](images/triangle.png)
+
+To use psml, arrange for the psml/psml.py file 
+to be importable from your project. 
+In the examples I add its directory to the search path.
+
+~~~Python
+import sys
+sys.path.append( "../psml" )
+~~~
    
 Similar libraries:
    - [SolidPython](https://github.com/SolidCode/SolidPython)
