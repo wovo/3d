@@ -63,16 +63,23 @@ In the examples I add its directory to the search path.
 import sys
 sys.path.append( "../psml" )
 ~~~
-   
-Similar libraries:
-   - [SolidPython](https://github.com/SolidCode/SolidPython)
-   - [OpenPySCAD](https://pypi.org/project/OpenPySCAD)
+
+My workflow is
+- edit the Python source 
+- run it from a command line
+- have OpenSCAD with the result file open, 
+enable Design => Automatic Reload and Preview.
    
 This library is very much work-in-progress. 
 Feedback is welcome. 
 Constructive feedback even more.
 
+Similar libraries:
+   - [SolidPython](https://github.com/SolidCode/SolidPython)
+   - [OpenPySCAD](https://pypi.org/project/OpenPySCAD)
+   
 ToDo list
+- simplify and check the shift parameters
 - tests
 - user manual
 - more examples
